@@ -1,9 +1,9 @@
 package blockchain;
 
 public class Transaction {
-	private Integer somme;
-	private Integer payeur;
-	private Integer receveur;
+	private int somme;
+	private int payeur;
+	private int receveur;
 	
 	public Transaction(int somme, int payeur, int receveur) {
 		this.somme = somme;
@@ -11,20 +11,21 @@ public class Transaction {
 		this.receveur = receveur;
 	}
 	
-    public Integer getSomme() {
+    public int getSomme() {
 		return somme;
 	}
 
-	public Integer getPayeur() {
+	public int getPayeur() {
 		return payeur;
 	}
 
-	public Integer getReceveur() {
+	public int getReceveur() {
 		return receveur;
 	}
 
 	@Override
     public int hashCode() {
-        return this.somme.hashCode() + this.payeur.hashCode() + this.receveur.hashCode();
+		// Le hashCode d'un int est le int lui meme
+        return this.somme + this.payeur + this.receveur;
     }
 }
