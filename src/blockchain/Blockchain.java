@@ -35,6 +35,7 @@ public class Blockchain {
 	public Blockchain() {
 		this.blockchain = new ArrayList<Jonction>();
 	}
+	
 	public Blockchain(Bloc blocInitial) {
 		this();
 		Jonction jonctionInitial = new Jonction(blocInitial,0,0);
