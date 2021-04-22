@@ -1,9 +1,9 @@
 package blockchain;
 
 public final class Etat implements Cloneable{
-	private Integer[] individus;
+	private int[] individus;
 
-	public Etat(Integer[] individus) {
+	public Etat(int[] individus) {
 		this.individus = individus.clone();
 	}
 	
@@ -11,12 +11,12 @@ public final class Etat implements Cloneable{
 		return this.individus[individu];
 	}
 	
-	private Integer[] getIndividus() {
+	private int[] getIndividus() {
 		return this.individus;
 	}
 	
     public Etat applyTransaction(Transaction t){
-    	Integer[] individus2 = this.individus.clone();
+    	int[] individus2 = this.individus.clone();
     	individus2[t.getPayeur()] -= t.getSomme();
     	individus2[t.getReceveur()] += t.getSomme();
     	Etat etat2 = new Etat(individus2);
@@ -33,7 +33,7 @@ public final class Etat implements Cloneable{
     @Override
     public boolean equals(Object o) {
     	Etat etat2 = (Etat) o;
-    	Integer[] list2 = etat2.getIndividus();
+    	int[] list2 = etat2.getIndividus();
     	return this.individus.equals(list2);
     }
     

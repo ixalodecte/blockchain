@@ -36,8 +36,9 @@ public class Blockchain {
 		this.blockchain = new ArrayList<Jonction>();
 	}
 	
-	public Blockchain(Bloc blocInitial) {
+	public Blockchain(Etat etatInitial) {
 		this();
+		Bloc blocInitial = new Bloc(etatInitial, null);
 		Jonction jonctionInitial = new Jonction(blocInitial,0,0);
 		this.blockchain.add(jonctionInitial);
 	}
