@@ -16,4 +16,11 @@ public class Bloc {
 	public Transaction getTransactionEffectuee() {
 		return transactionEffectuee;
 	}
+	
+	public int hashBloc() {
+
+		 return etatFinal.hashCode()+ transactionEffectuee.hashCode();
+		}
+	
+	
 }

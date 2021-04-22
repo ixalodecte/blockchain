@@ -27,14 +27,18 @@ class Jonction{
 	public int getHash() {
 		return hash;
 	}
-	
-
 }
 
 public class Blockchain {
 	private List<Jonction> blockchain;
+	
 	public Blockchain() {
 		this.blockchain = new ArrayList<Jonction>();
+	}
+	public Blockchain(Bloc blocInitial) {
+		this();
+		Jonction jonctionInitial = new Jonction(blocInitial,0,0);
+		this.blockchain.add(jonctionInitial);
 	}
 	
 	public boolean addBlock(Bloc b, int sel) {
