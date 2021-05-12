@@ -5,7 +5,7 @@ public class Transaction {
 	private int payeur;
 	private int receveur;
 	
-	public Transaction(int somme, int payeur, int receveur) {
+	public Transaction(int payeur, int receveur,int somme) {
 		this.somme = somme;
 		this.payeur = payeur;
 		this.receveur = receveur;
